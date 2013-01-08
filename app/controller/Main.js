@@ -207,10 +207,10 @@ Ext.define('ABLV.controller.Main', {
                 callbackKey: 'callback',
                 scriptTag: true, // Use script tag transport
                 callback: function(success, result) {
-                    Ext.StoreMgr.get('Tasks').load();
+                    
                     if (result.save == "success") {
                         console.log('Item saved as confirmed'); 
-                      
+                            Ext.StoreMgr.get('Tasks').load();
                             //Atgriežamies uz galveno skatu
                            
                             Ext.Viewport.animateActiveItem(main, {type:'slide', direction:'left'});
@@ -246,10 +246,10 @@ Ext.define('ABLV.controller.Main', {
                 callbackKey: 'callback',
                 scriptTag: true, // Use script tag transport
                 callback: function(success, result) {
-                    Ext.StoreMgr.get('Tasks').load();
+                    
                     if (result.save == "success") {
                         console.log('Item saved as canceled'); 
-                      
+                      Ext.StoreMgr.get('Tasks').load();
                             //Atgriežamies uz galveno skatu
                            
                             Ext.Viewport.animateActiveItem(main, {type:'slide', direction:'left'});

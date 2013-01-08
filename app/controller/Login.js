@@ -1,11 +1,13 @@
 Ext.define('ABLV.controller.Login', {
     extend: 'Ext.app.Controller',
+
     config: {
         refs: {
             loginView: 'loginview',
             //mainMenuView: 'mainmenuview',
             galvenais: 'galvenais',
             labaisLists: 'labaislists'
+          //  slideNav:                   'slidenavigationview'
         },
 
         control: {
@@ -124,7 +126,9 @@ Ext.define('ABLV.controller.Login', {
         var loginView = this.getLoginView();
         mainView = this.getGalvenais();
         loginView.setMasked(false);
-
+       // this.fireEvent("newNoteCommand", this);
+      // Ext.Viewport.getComponent("main").fireAction( "open");
+     //  console.log(Ext.Viewport.getComponent('galvenais'));
         Ext.Viewport.animateActiveItem(mainView, this.getSlideLeftTransition());
     },
 
