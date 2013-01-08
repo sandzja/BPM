@@ -44,7 +44,7 @@ launch: function() {
         //Ext.Viewport.add(Ext.create('ABLV.view.Galvenais'));
 
         Ext.Viewport.add([
-            { xtype: 'loginview' },
+            //{ xtype: 'loginview' },
             { xtype: 'galvenais' }
         ]);
 

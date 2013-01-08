@@ -29,6 +29,7 @@ Ext.define("ABLV.view.Main", {
         itemMask: true,
         closeOnSelect: false,
 
+
         /*Slaidera poga galvenajā skatā*/
         slideButtonDefaults: {
             selector: 'toolbar',
@@ -56,7 +57,7 @@ Ext.define("ABLV.view.Main", {
                 {
                     xtype: 'image',
                     docked: 'bottom',
-                    height: 125,
+                    height: 150,
                     width: 300,
                     position: 'center',
                     ui: 'light',
@@ -87,6 +88,7 @@ Ext.define("ABLV.view.Main", {
             title: 'Visi uzdevumi',
             group: 'Visi uzdevumi',
             id: 'first',
+
             
 
             // Enable the slide button using the defaults defined above in
@@ -96,7 +98,7 @@ Ext.define("ABLV.view.Main", {
             items: [
                 {//kreisās puses kategorija 'Visi uzdevumi'
                     xtype: 'toolbar',
-                    title: 'Visi uzdevumi new',
+                    title: 'Visi uzdevumi',
                     docked: 'top',
                     ui: 'light',
                 },
@@ -109,23 +111,43 @@ Ext.define("ABLV.view.Main", {
             },
         
             {//Pārējās kategorijas - jābūt dinamiskam listam
-            title: 'Atskaites sagatavošana',
+            title: 'Atbildes nosūtīšana',
             group: 'Kategorijas',
             slideButton: {
                 selector: 'toolbar',
                 iconMask: true,
                 //iconCls: 'arrow_left'
             },
-            items: [{
+            items: [
+            {
+                xtype: 'toolbar',
+                title: 'Atbildes nosūtīšana',
+                docked: 'top'
+                },
+                {//kreisās puses 'Atskaites sagatavošana'
+                    xtype: 'labaislists', //no šejienes ņem datus
+
+                // Mask this item when the container is opened
+                maskOnOpen: false
+            }]
+            },
+            
+            {//Nākošā apakškategorija
+            title: 'Atskaites sagatavošana',
+            group: 'Kategorijas',
+            slideButton: {
+                selector: 'toolbar',
+                iconMask: true,
+                iconCls: 'arrow_left'
+            },
+
+            items: [{    
                 xtype: 'toolbar',
                 title: 'Atskaites sagatavošana',
                 docked: 'top'
                 },
                 {//kreisās puses 'Atskaites sagatavošana'
-                    xtype: 'labaislists222', //no šejienes ņem datus
-                    //itemTpl:'{uzdevumaId}',
-                    //cls: 'custom-list-center',
-
+                    xtype: 'labaislists', //no šejienes ņem datus
 
                 // Mask this item when the container is opened
                 maskOnOpen: false
@@ -133,7 +155,73 @@ Ext.define("ABLV.view.Main", {
             },
 
             {//Nākošā apakškategorija
-            title: 'Rīkojuma nosūtīšana',
+            title: 'Eksperta atzinums',
+            group: 'Kategorijas',
+            slideButton: {
+                selector: 'toolbar',
+                iconMask: true,
+                iconCls: 'arrow_left'
+            },
+
+            items: [{    
+                xtype: 'toolbar',
+                title: 'Eksperta atzinums',
+                docked: 'top'
+                },
+                {//kreisās puses 'Atskaites sagatavošana'
+                    xtype: 'labaislists', //no šejienes ņem datus
+
+                // Mask this item when the container is opened
+                maskOnOpen: false
+            }]
+            },
+
+            {//Nākošā apakškategorija
+            title: 'Jurista atzinums',
+            group: 'Kategorijas',
+            slideButton: {
+                selector: 'toolbar',
+                iconMask: true,
+                iconCls: 'arrow_left'
+            },
+
+            items: [{    
+                xtype: 'toolbar',
+                title: 'Jurista atzinums',
+                docked: 'top'
+                },
+                {//kreisās puses 'Atskaites sagatavošana'
+                    xtype: 'labaislists', //no šejienes ņem datus
+
+                // Mask this item when the container is opened
+                maskOnOpen: false
+            }]
+            },
+
+            {//Nākošā apakškategorija
+            title: 'Klienta informēšana',
+            group: 'Kategorijas',
+            slideButton: {
+                selector: 'toolbar',
+                iconMask: true,
+                iconCls: 'arrow_left'
+            },
+
+            items: [{    
+                xtype: 'toolbar',
+                title: 'Klienta informēšana',
+                docked: 'top'
+                },
+                {//kreisās puses 'Atskaites sagatavošana'
+                    xtype: 'labaislists', //no šejienes ņem datus
+
+                // Mask this item when the container is opened
+                maskOnOpen: false
+            }]
+            },
+
+            {//Nākošā apakškategorija
+            title: 'Vēstules sagatavošana',
             group: 'Kategorijas',
             slideButton: {
                 selector: 'toolbar',
@@ -143,12 +231,11 @@ Ext.define("ABLV.view.Main", {
 
             items: [{
                 xtype: 'toolbar',
-                title: 'Rīkojuma nosūtīšana',
+                title: 'Vēstules sagatavošana',
                 docked: 'top'
                 },
                 {//kreisās puses 'Atskaites sagatavošana'
-                   xtype: 'labaislists222', //no šejienes ņem datus
-                    
+                    xtype: 'labaislists', //no šejienes ņem datus
 
                 // Mask this item when the container is opened
                 maskOnOpen: false
@@ -156,7 +243,7 @@ Ext.define("ABLV.view.Main", {
             },
 
             {//Nākošā apakškategorija
-            title: 'Lēmuma pieņemšana',
+            title: 'Paskaidrojums',
             group: 'Kategorijas',
             slideButton: {
                 selector: 'toolbar',
@@ -166,12 +253,55 @@ Ext.define("ABLV.view.Main", {
 
             items: [{
                 xtype: 'toolbar',
-                title: 'Lēmuma pieņemšana',
+                title: 'Paskaidrojums',
                 docked: 'top'
                 },
                 {//kreisās puses 'Atskaites sagatavošana'
-                    xtype: 'labaislists222', //no šejienes ņem datus
-                    
+                    xtype: 'labaislists', //no šejienes ņem datus
+
+                // Mask this item when the container is opened
+                maskOnOpen: false
+            }]
+            },
+
+            {//Nākošā apakškategorija
+            title: 'Rīkojuma sagatavošana',
+            group: 'Kategorijas',
+            slideButton: {
+                selector: 'toolbar',
+                iconMask: true,
+                iconCls: 'arrow_left'
+            },
+
+            items: [{
+                xtype: 'toolbar',
+                title: 'Rīkojuma sagatavošana',
+                docked: 'top'
+                },
+                {//kreisās puses 'Atskaites sagatavošana'
+                   xtype: 'labaislists', //no šejienes ņem datus
+
+                // Mask this item when the container is opened
+                maskOnOpen: false
+            }]
+            },
+
+            {//OK - Nākošā apakškategorija
+            title: 'Cits',
+            group: 'Kategorijas',
+            slideButton: {
+                selector: 'toolbar',
+                iconMask: true,
+                iconCls: 'arrow_left'
+            },
+
+            items: [{
+                xtype: 'toolbar',
+                title: 'Cits',
+                docked: 'top'
+                },
+                {//kreisās puses 'Atskaites sagatavošana'
+                    xtype: 'labaislists', //no šejienes ņem datus
 
                 // Mask this item when the container is opened
                 maskOnOpen: false
