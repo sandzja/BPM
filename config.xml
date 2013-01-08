@@ -2,10 +2,12 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id = "B23E7TGXVK.lv.digitalmind.ablv "
-        version = "2.0.0">
+        version = "2.0.1">
     <name>ABLV</name>
 
     <description>
+        Atjaunota versija.
+        Datums: 08.01.2013.
         Proof of Concept aplikācija izmantojot KSI procesu uzdevumu sadaļas
     </description>
 
