@@ -198,31 +198,29 @@ Ext.define('ABLV.controller.Main', {
                 //    form.referrer.setRecord(record);
                 //}
             }
-            
+        var main = this.getGalvenais();     
             //šeit sākas saglabāšana
         Ext.data.JsonP.request({
              type: 'jsonp',
-                url: 'http://10.20.30.80:8080/abdemo/index.php/welcome/confirmTask',
+                url: 'http://10.20.30.77:8080/abdemo/index.php/welcome/confirmTask',
                 params: record.data, //+ uzdevumaStatuss='Apstiprināts'
                 callbackKey: 'callback',
                 scriptTag: true, // Use script tag transport
                 callback: function(success, result) {
                     Ext.StoreMgr.get('Tasks').load();
-                    if (result.responseText) {
-                    result = Ext.decode(result.responseText);
+                    if (result.save == "success") {
+                        console.log('Item saved as confirmed'); 
+                      
+                            //Atgriežamies uz galveno skatu
+                           
+                            Ext.Viewport.animateActiveItem(main, {type:'slide', direction:'left'});
+                            console.log('BackItemTap funkcija');
                     }
+
                 },
         });
   
-        console.log('Item saved as confirmed'); 
-        //pāreja atpakaļ uz iepriekšējo skatu 
-     //   var tls = Ext.Viewport.getCmp('tasklist');
-      //  console.log(tls);
         
-        //Atgriežamies uz galveno skatu
-        var main = this.getGalvenais();
-        Ext.Viewport.animateActiveItem(main, {type:'slide', direction:'left'});
-        console.log('BackItemTap funkcija');
         
     },
 
@@ -239,18 +237,23 @@ Ext.define('ABLV.controller.Main', {
                 //    form.referrer.setRecord(record);
                 //}
             }
-            
+        var main = this.getGalvenais();     
             //šeit sākas saglabāšana
         Ext.data.JsonP.request({
              type: 'jsonp',
-                url: 'http://10.20.30.80:8080/abdemo/index.php/welcome/cancelTask',
+                url: 'http://10.20.30.77:8080/abdemo/index.php/welcome/cancelTask',
                 params: record.data, //+ uzdevumaStatuss='Apstiprināts'
                 callbackKey: 'callback',
                 scriptTag: true, // Use script tag transport
                 callback: function(success, result) {
                     Ext.StoreMgr.get('Tasks').load();
-                    if (result.responseText) {
-                    result = Ext.decode(result.responseText);
+                    if (result.save == "success") {
+                        console.log('Item saved as canceled'); 
+                      
+                            //Atgriežamies uz galveno skatu
+                           
+                            Ext.Viewport.animateActiveItem(main, {type:'slide', direction:'left'});
+                            console.log('BackItemTap funkcija');
                     }
                 },
         });
