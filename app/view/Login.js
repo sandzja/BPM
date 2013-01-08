@@ -12,8 +12,10 @@ Ext.define('ABLV.view.Login', {
             {
 
                 xtype: 'image',
-                src: Ext.Viewport.getOrientation() == 'portrait' ? '../ABLV02/resources/css/ablv_login_portrait.png' : '../ABLV02/resources/css/ablv_login_portrait.png',
-                style: Ext.Viewport.getOrientation() == 'portrait' ? 'width:150px;height:124px;margin:auto' : 'width:150px;height:124px;margin:auto'
+                src: 'img/login.png',
+                height: 124,
+                width: '100%',
+                position: 'center',
 
             },
 

@@ -4,7 +4,7 @@ Ext.define('ABLV.view.Galvenais', {
     alias: 'widget.galvenais',
 
     requires: [
-        'ABLV.view.Main'
+        'ABLV.view.Main', 'ABLV.store.Tasks'
     ],
 
     config: {
@@ -15,9 +15,11 @@ Ext.define('ABLV.view.Galvenais', {
         },
         items: [
             {
+                
                 xtype: 'mainview'
             }
         ]
     }
+
 
 });
