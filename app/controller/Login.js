@@ -33,6 +33,7 @@ Ext.define('ABLV.controller.Login', {
     },
 
     onSignInCommand: function (view, username, password) {
+        
         console.log('Username: ' + username + '\n' + 'Password: ' + password + '\n' + " view "+ view.id);
 
         var me = this,
@@ -125,7 +126,7 @@ Ext.define('ABLV.controller.Login', {
         console.log('Signed in.');
         var loginView = this.getLoginView();
         mainView = this.getGalvenais();
-        loginView.setMasked(false);
+        loginView.setMasked(true);
        // this.fireEvent("newNoteCommand", this);
       // Ext.Viewport.getComponent("main").fireAction( "open");
      //  console.log(Ext.Viewport.getComponent('galvenais'));

@@ -75,6 +75,7 @@ Ext.define('ABLV.view.Login', {
             label = me.down('#signInFailedLabel'),
             username = usernameField.getValue(),
             password = passwordField.getValue();
+            //Ext.getCmp('#passwordTextField').blur();
 
         label.hide();
         // Using a delayed task in order to give the hide animation above
@@ -94,5 +95,5 @@ Ext.define('ABLV.view.Login', {
         var label = this.down('#signInFailedLabel');
         label.setHtml(message);
         label.show();
-    }
+    },
 });

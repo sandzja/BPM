@@ -201,6 +201,7 @@ Ext.define('ABLV.controller.Main', {
                 //}
             }
         var main = this.getGalvenais();     
+        var lab = this.getLabaislists();
             //šeit sākas saglabāšana
         Ext.data.JsonP.request({
              type: 'jsonp',
@@ -212,9 +213,13 @@ Ext.define('ABLV.controller.Main', {
                     
                     if (result.save == "success") {
                         console.log('Item saved as confirmed'); 
-                            Ext.StoreMgr.get('Tasks').load();
+                            //Ext.StoreMgr.get('Tasks').load();
                             //Atgriežamies uz galveno skatu
-                           
+                            
+                            Ext.StoreMgr.get('Tasks').remove(record); 
+                            Ext.StoreMgr.get('Tasks').load();
+                            Ext.dataview.List(lab).refresh();
+
                             Ext.Viewport.animateActiveItem(main, {type:'slide', direction:'left'});
                             console.log('BackItemTap funkcija');
                     }
@@ -239,7 +244,8 @@ Ext.define('ABLV.controller.Main', {
                 //    form.referrer.setRecord(record);
                 //}
             }
-        var main = this.getGalvenais();     
+        var main = this.getGalvenais(); 
+        var lab = this.getLabaislists();    
             //šeit sākas saglabāšana
         Ext.data.JsonP.request({
              type: 'jsonp',
@@ -254,6 +260,10 @@ Ext.define('ABLV.controller.Main', {
                       Ext.StoreMgr.get('Tasks').load();
                             //Atgriežamies uz galveno skatu
                            
+                            Ext.StoreMgr.get('Tasks').remove(record); 
+                            Ext.StoreMgr.get('Tasks').load();
+                            Ext.dataview.List(lab).refresh();
+
                             Ext.Viewport.animateActiveItem(main, {type:'slide', direction:'left'});
                             console.log('BackItemTap funkcija');
                     }
