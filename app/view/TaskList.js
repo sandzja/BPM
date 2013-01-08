@@ -8,7 +8,7 @@ Ext.define('ABLV.view.TaskList', {
 		cls: 'custom-list-center',
 		animation: 'slide', 
 		title: 'Uzdevumu saraksts', 
-		id: 'labaislists',
+		itemId: 'labaislists',
 		grouped: true,
 		itemTpl: '{uzdevumaApraksts}, id: {id}',
 		store: 'Tasks',

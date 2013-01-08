@@ -50,25 +50,25 @@ Ext.define('ABLV.controller.Main', {
             //slaid nav sākums
             slideNav: {
                 open: function(nav, position, duration) {
-                    console.log('Container open (position='+position+',duration='+duration+')');
+                    //console.log('Container open (position='+position+',duration='+duration+')');
                 },
 
                 close: function(nav, position, duration) {
-                    console.log('Container close (position='+position+',duration='+duration+')');
+                    //console.log('Container close (position='+position+',duration='+duration+')');
                 },
 
                 select: function(nav, item, index) {
-                    console.log('Selected item (index='+index+')');
-                    console.log(item.title);
-                          if(index == 0){
+                  //  console.log('Selected item (index='+index+')');
+                  //  console.log(item.title);
+                         if(index == 0){
                             Ext.StoreMgr.get('Tasks').clearFilter();
-                          } else {
-                                Ext.StoreMgr.get('Tasks').load();
+                          } 
+                          else {
+                              //  Ext.StoreMgr.get('Tasks').load();
                                 Ext.StoreMgr.get('Tasks').clearFilter();
                                 Ext.StoreMgr.get('Tasks').filter('uzdevumaTips', item.title);
-                                console.log("īpašais komentārs Sandim!1!");
+                                
                           }
-
 
 /*                           if (index == 1){
                              Ext.StoreMgr.get('Tasks').clearFilter();
@@ -87,27 +87,27 @@ Ext.define('ABLV.controller.Main', {
                 },
 
                 opened: function(nav) {
-                    console.log('Container opened');
+                  //  console.log('Container opened');
                 },
 
                 closed: function(nav) {
-                    console.log('Container closed');
+                    // console.log('Container closed');
                 },
 
                 slideend: function(nav) {
-                    console.log('Container slideend');
+                    // console.log('Container slideend');
                 },
 
                 slidestart: function(nav) {
-                    console.log('Container slidestart');
+                    // console.log('Container slidestart');
                 },
 
                 dragstart: function(nav) {
-                    console.log('Container dragstart');
+                    // console.log('Container dragstart');
                 },
 
                 dragend: function(nav) {
-                    console.log('Container dragend');
+                    // console.log('Container dragend');
                 }
             },
             //slaid nav beigas
@@ -145,30 +145,30 @@ Ext.define('ABLV.controller.Main', {
 
     onContactItemTap: function(dataview, index, target, record, e, options) {
         var info = this.getTaskdetails();
-        console.log(info);
+        // console.log(info);
 
         info.setRecord(record);
         //!!Ieliekot divreiz, pasākums strādā, bet bez animācijas!!
         Ext.Viewport.animateActiveItem(info, {type:'slide', direction:'left'});
         Ext.Viewport.animateActiveItem(info, {type:'slide', direction:'left'});
-        console.log('ContactItemTap funkcija');
+     //   console.log('ContactItemTap funkcija');
 
     },
 
     onListActivate: function(container, newActiveItem, oldActiveItem, options) {
         var ds = Ext.StoreManager.lookup('Tasks');
         ds.clearFilter();
-        console.log('ListActivate funkcija');
+        // console.log('ListActivate funkcija');
     },
 
      onInfoBackBtnTap: function(button, e, options) {
         var main = this.getGalvenais();
-        console.log(main);
+        // console.log(main);
 
         // main.setRecord(record);
         
         Ext.Viewport.animateActiveItem(main, {type:'slide', direction:'left'});
-        console.log('BackItemTap funkcija');
+      //  console.log('BackItemTap funkcija');
     },
 
     onEditContactBtnTap: function(button, e, options) {
@@ -200,8 +200,8 @@ Ext.define('ABLV.controller.Main', {
                 //    form.referrer.setRecord(record);
                 //}
             }
-        var main = this.getGalvenais();     
-        var lab = this.getLabaislists();
+        var main = this.getGalvenais();
+        var lab = this.getLabaislists();     
             //šeit sākas saglabāšana
         Ext.data.JsonP.request({
              type: 'jsonp',
@@ -212,22 +212,34 @@ Ext.define('ABLV.controller.Main', {
                 callback: function(success, result) {
                     
                     if (result.save == "success") {
-                        console.log('Item saved as confirmed'); 
-                            //Ext.StoreMgr.get('Tasks').load();
-                            //Atgriežamies uz galveno skatu
+                        //console.log('Item saved as confirmed'); 
                             
-                            Ext.StoreMgr.get('Tasks').remove(record); 
-                            Ext.StoreMgr.get('Tasks').load();
-                            Ext.dataview.List(lab).refresh();
+                            //Atgriežamies uz galveno skatu
+                                  // console.log(record.data.uzdevumaTips);
 
+                                    // Ext.StoreMgr.get('Tasks').filter('uzdevumaTips', record.data.uzdevumaTips);
+                                     Ext.StoreMgr.get('Tasks').remove(record); 
+                                     Ext.StoreMgr.get('Tasks').load();
+                                  //   Ext.view.getcomponent('labaislists').refresh();
+                          // console.log(Ext.dataview.List(galvenais));
+                           // console.log(Ext.dataview.List(lab));
+                          Ext.dataview.List(lab).refresh();                                    
+                                  //   console.log(Ext.Viewport.getComponent('labaislists'));
+                                   //  Ext.Viewport.getComponent('labaislists').refresh();
+                                   //Ext.StoreMgr.get('Tasks').clearFilter();       
+                                    // Ext.StoreMgr.get('Tasks').sync(); 
                             Ext.Viewport.animateActiveItem(main, {type:'slide', direction:'left'});
-                            console.log('BackItemTap funkcija');
+                            // console.log('BackItemTap funkcija');
                     }
 
-                },
+                }
         });
   
-        
+        //Ext.StoreMgr.get('Tasks').removeAt(record.data.id);
+        //console.log(record.data.id);
+       //Ext.StoreMgr.get('Tasks').remove(record); 
+      // Ext.StoreMgr.get('Tasks').sync();
+
         
     },
 
@@ -244,8 +256,8 @@ Ext.define('ABLV.controller.Main', {
                 //    form.referrer.setRecord(record);
                 //}
             }
-        var main = this.getGalvenais(); 
-        var lab = this.getLabaislists();    
+        var main = this.getGalvenais();
+        var lab = this.getLabaislists();     
             //šeit sākas saglabāšana
         Ext.data.JsonP.request({
              type: 'jsonp',
@@ -256,33 +268,31 @@ Ext.define('ABLV.controller.Main', {
                 callback: function(success, result) {
                     
                     if (result.save == "success") {
-                        console.log('Item saved as canceled'); 
-                      Ext.StoreMgr.get('Tasks').load();
+                         
+
                             //Atgriežamies uz galveno skatu
-                           
                             Ext.StoreMgr.get('Tasks').remove(record); 
                             Ext.StoreMgr.get('Tasks').load();
                             Ext.dataview.List(lab).refresh();
-
                             Ext.Viewport.animateActiveItem(main, {type:'slide', direction:'left'});
-                            console.log('BackItemTap funkcija');
+                         //   console.log('BackItemTap funkcija');
                     }
                 },
         });
   
-        console.log('Item saved as cancelled'); 
+      //  console.log('Item saved as cancelled'); 
         //pāreja atpakaļ uz iepriekšējo skatu 
      //   var tls = Ext.Viewport.getCmp('tasklist');
       //  console.log(tls);
        
        //Atgriežamies uz galveno skatu
         var main = this.getGalvenais();
-        console.log(main);
+    //    console.log(main);
 
         // main.setRecord(record);
         
         Ext.Viewport.animateActiveItem(main, {type:'slide', direction:'left'});
-        console.log('BackItemTap funkcija');   
+  //      console.log('BackItemTap funkcija');   
         
     }, 
 
