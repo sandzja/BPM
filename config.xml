@@ -22,9 +22,19 @@
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="false" />
     <preference name="exit-on-suspend" value="true" />
+    <preference name="show-splash-screen-spinner" value="false"> 
     
 
-    <icon src="icon.png" />
-    <icon src="icon.png"            gap:platform="ios"        width="57" height="57" />
+    <icon src="img/icon.png" />
+    <icon src="img/icon57.png"            gap:platform="ios"        width="57" height="57" />
+    <icon src="img/icon72.png"            gap:platform="ios"        width="72" height="72" />
+    <icon src="img/icon114.png"            gap:platform="ios"        width="114" height="114" />
+    <icon src="img/icon144.png"            gap:platform="ios"        width="144" height="144" />
+
+    <startupImage src="img/startup320.png"            gap:platform="ios"        width="320" height="460" />
+    <startupImage src="img/startup640.png"            gap:platform="ios"        width="640" height="920" />  
+    <startupImage src="img/startup768.png"            gap:platform="ios"        width="768" height="1004" />  
+    <startupImage src="img/startup748.png"            gap:platform="ios"        width="748" height="1024" />
+      
 
 </widget>

@@ -138,7 +138,7 @@ Ext.define("ABLV.view.Main", {
             slideButton: {
                 selector: 'toolbar',
                 iconMask: true,
-                iconCls: 'arrow_left'
+                //iconCls: 'arrow_left'
             },
 
             items: [{    
@@ -160,7 +160,7 @@ Ext.define("ABLV.view.Main", {
             slideButton: {
                 selector: 'toolbar',
                 iconMask: true,
-                iconCls: 'arrow_left'
+                //iconCls: 'arrow_left'
             },
 
             items: [{    
@@ -182,7 +182,7 @@ Ext.define("ABLV.view.Main", {
             slideButton: {
                 selector: 'toolbar',
                 iconMask: true,
-                iconCls: 'arrow_left'
+                //iconCls: 'arrow_left'
             },
 
             items: [{    
@@ -204,7 +204,7 @@ Ext.define("ABLV.view.Main", {
             slideButton: {
                 selector: 'toolbar',
                 iconMask: true,
-                iconCls: 'arrow_left'
+                //iconCls: 'arrow_left'
             },
 
             items: [{    
@@ -226,7 +226,7 @@ Ext.define("ABLV.view.Main", {
             slideButton: {
                 selector: 'toolbar',
                 iconMask: true,
-                iconCls: 'arrow_left'
+                //iconCls: 'arrow_left'
             },
 
             items: [{
@@ -248,7 +248,7 @@ Ext.define("ABLV.view.Main", {
             slideButton: {
                 selector: 'toolbar',
                 iconMask: true,
-                iconCls: 'arrow_left'
+                //iconCls: 'arrow_left'
             },
 
             items: [{
@@ -270,7 +270,7 @@ Ext.define("ABLV.view.Main", {
             slideButton: {
                 selector: 'toolbar',
                 iconMask: true,
-                iconCls: 'arrow_left'
+                //iconCls: 'arrow_left'
             },
 
             items: [{
@@ -292,7 +292,7 @@ Ext.define("ABLV.view.Main", {
             slideButton: {
                 selector: 'toolbar',
                 iconMask: true,
-                iconCls: 'arrow_left'
+                //iconCls: 'arrow_left'
             },
 
             items: [{
