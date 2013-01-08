@@ -15,7 +15,7 @@ Ext.application({
         'Ext.MessageBox','Ext.data.Store', 'Ext.data.proxy.JsonP', 'Ext.dataview.List', 'Ext.dataview.NestedList', 'Ext.Img', 'Ext.form.Panel', 'Ext.field.DatePicker', 'Ext.form.FieldSet'
     ],
 
-    views: ['Galvenais', 'Main', 'TaskDetails', 'TaskList', 'TaskList222', 'Login'],
+    views: ['Galvenais', 'Main', 'TaskDetails', 'TaskList', 'Login'],
     controllers: ['Main', 'Login'],
     models:['Task'],
     stores:['Tasks'],
