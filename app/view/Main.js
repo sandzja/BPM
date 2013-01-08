@@ -36,6 +36,7 @@ Ext.define("ABLV.view.Main", {
             ui: 'action'
         },
         
+        
         /*Kreisais menu slaideris*/ 
         list: {
             id: 'kreisaislists',
