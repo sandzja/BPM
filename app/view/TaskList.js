@@ -12,6 +12,7 @@ Ext.define('ABLV.view.TaskList', {
 		grouped: true,
 		itemTpl: '{uzdevumaApraksts}, id: {id}',
 		store: 'Tasks',
+		disableSelection: true,
 		refs: {
 			taskdetails: {
                 autoCreate: true,
