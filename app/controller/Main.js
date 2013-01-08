@@ -66,6 +66,7 @@ Ext.define('ABLV.controller.Main', {
                                 Ext.StoreMgr.get('Tasks').load();
                                 Ext.StoreMgr.get('Tasks').clearFilter();
                                 Ext.StoreMgr.get('Tasks').filter('uzdevumaTips', item.title);
+                                console.log("īpašais komentārs Sandim!1!");
                           }
 
 
