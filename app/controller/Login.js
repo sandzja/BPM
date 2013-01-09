@@ -51,7 +51,7 @@ Ext.define('ABLV.controller.Login', {
 
         Ext.data.JsonP.request({
             type: 'jsonp',
-                url: 'http://10.20.33.11/abdemo/index.php/welcome/login',
+                url: 'http://62.85.27.32/abdemo/index.php/welcome/login',
                 params: {
                 username: username,
                 password: password
