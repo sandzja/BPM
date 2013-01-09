@@ -80,7 +80,7 @@ Ext.define('ABLV.view.TaskDetails', {
                         //disabled: true,
                         itemid: 'izpildesDatums',
                         clearIcon: false,
-                        label: 'Izpildes termiņš:',
+                        label: 'Uzdevums izveidots:',
                         name: 'izpildesDatums',
                         //placeHolder: 'Izpildes termiņš nav norādīts',
                         readOnly: true
@@ -107,57 +107,47 @@ Ext.define('ABLV.view.TaskDetails', {
                         //labelAlign: 'top'
                     },
                     {//Pietrūkst!!
-                                xtype: 'datepickerfield',
-                                //disabled: true,
-                                itemid: 'FaktiskaisIzpildesDatums',
-                                clearIcon: false,
-                                label: 'Faktiskais izpildes datums:',
-                                name: 'FaktiskaisIzpildesDatums',
-                                value : { day: new Date().getDate(), month: (new Date().getMonth()+1), year : new Date().getFullYear()},
-                                readOnly: false,
-                                picker: {
-                                        yearFrom: 2012,
-                                        yearTo: 2015
-                                        }
+
+                            xtype: 'datepickerfield',
+                            itemid: 'FaktiskaisIzpildesDatums',
+                            clearIcon: false,
+                            label: 'Faktiskais izpildes datums:',
+                            name: 'FaktiskaisIzpildesDatums',
+                            value : { day: new Date().getDate(), month: (new Date().getMonth()+1), year : new Date().getFullYear()},
+                            readOnly: false,
+                            picker: {
+                                    yearFrom: 2012,
+                                    yearTo: 2015
+                                    }
+                    },
+                    {
+                            xtype: 'textfield',
+                            name: 'lietotajs',
+                            label: 'Lietotājs:',
+                            itemId: 'lietotajs',
+                            //disabled: true,
+                            clearIcon: true,
+                            readOnly: true,
+                            hidden: true,
+                            placeHolder: 'Lietotājs',
+                            //labelAlign: 'top'
+                    },
+                    {//Pietrūkst!!
+                            xtype: 'textfield',
+                            name: 'uzdevumaStatuss',
+                            label: 'Uzdevuma statuss:',
+                            itemId: 'uzdevumaStatuss',
+                            //disabled: true,
+                            clearIcon: true,
+                            readOnly: true,
+                            hidden: true,
+                            placeHolder: 'Lietotājs',
+                            //labelAlign: 'top'
                     },
 
                 ],    
-            },/*,{
-                xtype: 'fieldset',
-                title: 'Pārējie lauki',
-                defaults: {
-                    labelWidth: '30%'
-                },
-                items: [
-                    {//Pietrūkst!!
-                        xtype: 'textfield',
-                        name: 'lietotajs',
-                        label: 'Lietotājs:',
-                        itemId: 'lietotajs',
-                        //disabled: true,
-                        clearIcon: true,
-                        readOnly: true,
-                        hidden: false,
-                        placeHolder: 'Lietotājs',
-                        //labelAlign: 'top'
-                    },
-                    {//Pietrūkst!!
-                        xtype: 'textfield',
-                        name: 'uzdevumaStatuss',
-                        label: 'Uzdevuma statuss:',
-                        itemId: 'uzdevumaStatuss',
-                        //disabled: true,
-                        clearIcon: true,
-                        readOnly: true,
-                        hidden: false,
-                        placeHolder: 'Lietotājs',
-                        //labelAlign: 'top'
-                    },
-                ],    
-            },*/
-           
+            },       
             
-
             {
                 xtype: 'toolbar',
                 docked: 'bottom',

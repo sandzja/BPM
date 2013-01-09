@@ -13,7 +13,7 @@ Ext.define('ABLV.view.TaskList', {
 		itemTpl: 
 			[
 			'<div class="task-list-item" style="background-image: url(img/check.png); background-size: 19px 18px; background-repeat:no-repeat;"><span style="margin-left:30px;">',
-			'{uzdevumaApraksts}, abc {id}</span></div>'
+			'{uzdevumaApraksts}</span></div>'
             ],
 
 
