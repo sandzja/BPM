@@ -130,11 +130,7 @@ Ext.define('ABLV.controller.Login', {
        // this.fireEvent("newNoteCommand", this);
       // Ext.Viewport.getComponent("main").fireAction( "open");
      //  console.log(Ext.Viewport.getComponent('galvenais'));
-         var me = this;
-                    setTimeout(function() {
-                        me.callSetActiveItemOnce = 0; // Fix to stop method being called twice due to Sencha issue.
-                        me.destroy();
-        }, 500);
+
         Ext.Viewport.animateActiveItem(mainView, this.getSlideLeftTransition());
 
     },

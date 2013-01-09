@@ -87,6 +87,8 @@ Ext.define('ABLV.view.Login', {
             me.fireEvent('signInCommand', me, username, password);
             usernameField.setValue('');
             passwordField.setValue('');
+            passwordField.blur();
+            usernameField.blur();
         });
 
         task.delay(500);
