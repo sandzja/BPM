@@ -18,7 +18,7 @@ Ext.define('ABLV.view.TaskDetails', {
                     {
                         xtype: 'button',
                         itemId: 'infoBackBtn',
-                        ui: 'back',
+                        ui: 'action',
                         text: 'Back'
                     },
                     {
