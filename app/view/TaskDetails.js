@@ -112,12 +112,14 @@ Ext.define('ABLV.view.TaskDetails', {
 
                             xtype: 'datepickerfield',
                             itemid: 'izpildesDatums',
+                            id: 'izpildesDatums',
                             clearIcon: false,
                             label: 'Faktiskais izpildes datums:',
                             name: 'izpildesDatums',
-                            value : { day: new Date().getDate(), month: (new Date().getMonth()+1), year : new Date().getFullYear()},
+                         //  slotOrder: ['day', 'month', 'year'], 
+                        // value: new Date(),
                             readOnly: false,
-                            dateFormat: 'd/m/Y',
+                           dateFormat: 'd/m/Y',
                             picker: {
                                     yearFrom: 2012,
                                     yearTo: 2015
@@ -204,12 +206,11 @@ Ext.define('ABLV.view.TaskDetails', {
         var izpdate = this.down('#izpildesTermins').setValue(Ext.Date.format(date, 'd/m/Y'));
         //console.log(izpdate);
         record.set("izpildesTermins", Ext.Date.format(date, 'd/m/Y'));
-       // this.get
-        //izpildesTermins
-
-        /*if (record) {
-            this.child('contactpic').setData(record.data);
-        }*/
+/*
+        var todaydate = new Date();
+         var changedTodaydate = this.down('#izpildesDatums').setValue(Ext.Date.format(todaydate, 'd/m/Y'));
+       console.log(changedTodaydate);*/
+     
     }
 
 });

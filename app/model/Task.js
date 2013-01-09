@@ -11,10 +11,10 @@ Ext.define('ABLV.model.Task', {
 		//{name: 'uzdevumaNosaukums'},
 		{name: 'uzdevumaTips'},
 		{name: 'uzdevumaApraksts'},
-		{name: 'izpildesTermins', type: 'date', dateFormat: 'Y-d-m'},
+		{name: 'izpildesTermins', type: 'date', dateFormat: 'Y-m-d'},
 		{name: 'uzdevumaStatuss'},
 		{name: 'komentars'},
-		{name: 'izpildesDatums', type: 'date', dateFormat: 'Y-d-m'}
+		{name: 'izpildesDatums', type: 'date', dateFormat: 'Y-m-d'}
 
 		]
 
