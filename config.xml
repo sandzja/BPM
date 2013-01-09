@@ -31,7 +31,12 @@
     <icon src="img/icon144.png"            gap:platform="ios"        width="144" height="144" />
 
     
-    <gap:splash src="img/startup.png" />
+    <gap:splash src="splash.png" />
+    <gap:splash src="img/splash.png" width="320" height="480" />
+    <gap:splash src="img/splash_at_2x.png" width="640" height="960" />
+    <gap:splash src="img/splash_iphone5.png" width="640" height="1136" />
+    <gap:splash src="img/splash-Landscape.png" width="1024" height="768" />
+    <gap:splash src="img/splash-Portrait.png" width="768" height="1024" />
     
 
    
