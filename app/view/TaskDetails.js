@@ -2,7 +2,7 @@ Ext.define('ABLV.view.TaskDetails', {
     extend: 'Ext.form.Panel',
     xtype: 'taskdetails',
     alias: 'widget.taskdetails',
-    
+     requires: 'Ext.DateExtras',
 
     
     config: {
@@ -82,7 +82,7 @@ Ext.define('ABLV.view.TaskDetails', {
                         clearIcon: false,
                         label: 'Uzdevums izveidots:',
                         name: 'izpildesTermins',
-                        defaultDateFormat: 'm/d/Y',
+                        id: 'izpildesTermins',
                         
                         //placeHolder: 'Izpildes termiņš nav norādīts',
                         readOnly: true
@@ -197,6 +197,16 @@ Ext.define('ABLV.view.TaskDetails', {
 
     setRecord: function(record) {
         this.callParent(arguments);
+         var date = record.data.izpildesTermins;
+         //console.log(record);
+        //console.log(Ext.Date.format(date, 'j/d/Y'));
+       // record.data.izpildesTermins = Ext.Date.format(date, 'j/d/Y');
+        var izpdate = this.down('#izpildesTermins').setValue(Ext.Date.format(date, 'd/m/Y'));
+        //console.log(izpdate);
+        record.set("izpildesTermins", Ext.Date.format(date, 'd/m/Y'));
+       // this.get
+        //izpildesTermins
+
         /*if (record) {
             this.child('contactpic').setData(record.data);
         }*/
