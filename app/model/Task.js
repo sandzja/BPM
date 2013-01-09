@@ -11,7 +11,7 @@ Ext.define('ABLV.model.Task', {
 		//{name: 'uzdevumaNosaukums'},
 		{name: 'uzdevumaTips'},
 		{name: 'uzdevumaApraksts'},
-		{name: 'izpildesTermins', type: 'date'},
+		{name: 'izpildesTermins', type: 'date', dateFormat: 'yyyy-dd-mm'},
 		{name: 'uzdevumaStatuss'},
 		{name: 'komentars'},
 		{name: 'FaktiskaisIzpildesDatums'}
