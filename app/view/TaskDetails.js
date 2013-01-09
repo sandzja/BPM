@@ -78,10 +78,12 @@ Ext.define('ABLV.view.TaskDetails', {
                     {   
                         xtype: 'textfield',
                         //disabled: true,
-                        itemid: 'izpildesDatums',
+                        itemid: 'izpildesTermins',
                         clearIcon: false,
                         label: 'Uzdevums izveidots:',
-                        name: 'izpildesDatums',
+                        name: 'izpildesTermins',
+                        defaultDateFormat: 'm/d/Y',
+                        
                         //placeHolder: 'Izpildes termiņš nav norādīts',
                         readOnly: true
                     },
@@ -109,12 +111,13 @@ Ext.define('ABLV.view.TaskDetails', {
                     {//Pietrūkst!!
 
                             xtype: 'datepickerfield',
-                            itemid: 'FaktiskaisIzpildesDatums',
+                            itemid: 'izpildesDatums',
                             clearIcon: false,
                             label: 'Faktiskais izpildes datums:',
-                            name: 'FaktiskaisIzpildesDatums',
+                            name: 'izpildesDatums',
                             value : { day: new Date().getDate(), month: (new Date().getMonth()+1), year : new Date().getFullYear()},
                             readOnly: false,
+                            dateFormat: 'm/d/Y',
                             picker: {
                                     yearFrom: 2012,
                                     yearTo: 2015
