@@ -205,7 +205,7 @@ Ext.define('ABLV.controller.Main', {
             //šeit sākas saglabāšana
         Ext.data.JsonP.request({
              type: 'jsonp',
-                url: 'http://10.20.30.75:8080/abdemo/index.php/welcome/confirmTask',
+                url: 'http://10.20.33.11/abdemo/index.php/welcome/confirmTask',
                 params: record.data, //+ uzdevumaStatuss='Apstiprināts'
                 callbackKey: 'callback',
                 scriptTag: true, // Use script tag transport
@@ -261,7 +261,7 @@ Ext.define('ABLV.controller.Main', {
             //šeit sākas saglabāšana
         Ext.data.JsonP.request({
              type: 'jsonp',
-                url: 'http://10.20.30.75:8080/abdemo/index.php/welcome/cancelTask',
+                url: 'http://10.20.33.11/abdemo/index.php/welcome/cancelTask',
                 params: record.data, //+ uzdevumaStatuss='Apstiprināts'
                 callbackKey: 'callback',
                 scriptTag: true, // Use script tag transport
