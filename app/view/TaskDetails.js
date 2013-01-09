@@ -117,7 +117,7 @@ Ext.define('ABLV.view.TaskDetails', {
                             name: 'izpildesDatums',
                             value : { day: new Date().getDate(), month: (new Date().getMonth()+1), year : new Date().getFullYear()},
                             readOnly: false,
-                            dateFormat: 'm/d/Y',
+                            dateFormat: 'd/m/Y',
                             picker: {
                                     yearFrom: 2012,
                                     yearTo: 2015
