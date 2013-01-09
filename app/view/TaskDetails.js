@@ -42,7 +42,7 @@ Ext.define('ABLV.view.TaskDetails', {
                         itemId: 'id',
                         //disabled: true,
                         clearIcon: false,
-                        readOnly: false,
+                        readOnly: true,
                         hidden: true
                         //labelAlign: 'top'
                     },
@@ -53,7 +53,7 @@ Ext.define('ABLV.view.TaskDetails', {
                         clearIcon: false,
                         label: 'Uzdevuma ID',
                         name: 'uzdevumaID',
-                        readOnly: false,
+                        readOnly: true,
                         hidden: false
                     },
                     {
@@ -64,7 +64,7 @@ Ext.define('ABLV.view.TaskDetails', {
                         label: 'Uzdevuma tips:',
                         name: 'uzdevumaTips',
                         placeHolder: 'Uzdevuma tips nav norādīts',
-                        readOnly: false
+                        readOnly: true
                     },{
                         xtype: 'textfield',
                         //disabled: true,
@@ -73,7 +73,7 @@ Ext.define('ABLV.view.TaskDetails', {
                         label: 'Uzdevuma apraksts:',
                         name: 'uzdevumaApraksts',
                         placeHolder: 'Uzdevuma apraksts nav norādīts',
-                        readOnly: false
+                        readOnly: true
                     },
                     {   
                         xtype: 'textfield',
@@ -83,7 +83,7 @@ Ext.define('ABLV.view.TaskDetails', {
                         label: 'Izpildes termiņš:',
                         name: 'izpildesDatums',
                         //placeHolder: 'Izpildes termiņš nav norādīts',
-                        readOnly: false
+                        readOnly: true
                     },
                 ],    
             },                
@@ -122,7 +122,7 @@ Ext.define('ABLV.view.TaskDetails', {
                     },
 
                 ],    
-            },{
+            },/*,{
                 xtype: 'fieldset',
                 title: 'Pārējie lauki',
                 defaults: {
@@ -154,14 +154,14 @@ Ext.define('ABLV.view.TaskDetails', {
                         //labelAlign: 'top'
                     },
                 ],    
-            },
+            },*/
            
             
 
             {
                 xtype: 'toolbar',
                 docked: 'bottom',
-                ui: 'dark',
+                ui: 'black',
                 title: '',
                 items: [
                     {

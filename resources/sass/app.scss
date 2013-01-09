@@ -28,6 +28,8 @@ $list-bg-color: #1E0000;
 @include sencha-draw;
 @include sencha-charts;
 
+@include sencha-toolbar-ui('black', #000000,'glossy');
+
 //augšā pa vidu virsraksti
 .x-title .x-innerhtml {
 	color: $active-color;
