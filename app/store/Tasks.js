@@ -15,7 +15,7 @@ Ext.define('ABLV.store.Tasks', {
 
 		/*!!šobrīd nestrādā!!*/
 		sorter: ('izpildesTermins'),
-		/*data:[
+		data:[
 				//Canadian Provinces
 				{id:1, lietotajs: 'Sandis', uzdevumaTips:'Atskaites sagatavošana', uzdevumaID:111, uzdevumaApraksts: 'Un šeit ir apraksts', izpildesTermins: '02/02/2013', uzdevumaStatuss: 'Procesā', komentars: 'Un šeit mēs rakstām komentāru', FaktiskaisIzpildesDatums: '2013.02.02'},
 				{id:2, lietotajs: 'Sandis', uzdevumaTips:'Atskaites sagatavošana', uzdevumaID:222, uzdevumaApraksts: '2Un šeit ir apraksts', izpildesTermins: '03.03.2013', uzdevumaStatuss: 'Procesā', komentars: '2Un šeit mēs rakstām komentāru', FaktiskaisIzpildesDatums: '2013.03.03'},
@@ -24,7 +24,7 @@ Ext.define('ABLV.store.Tasks', {
 				{id:5, lietotajs: 'Uldis', uzdevumaTips:'Lēmuma pieņemšana', uzdevumaID:555, uzdevumaApraksts: '5Un šeit ir apraksts', izpildesTermins: '2013.06.06', uzdevumaStatuss: 'Procesā', komentars: '5Un šeit mēs rakstām komentāru', FaktiskaisIzpildesDatums: '2013.06.06'},
 				{id:6, lietotajs: 'Uldis', uzdevumaTips:'Lēmuma pieņemšana', uzdevumaID:666, uzdevumaApraksts: '6Un šeit ir apraksts', izpildesTermins: '2013.07.07', uzdevumaStatuss: 'Procesā', komentars: '6Un šeit mēs rakstām komentāru', FaktiskaisIzpildesDatums: '2013.07.07'},
 
-		],*/
+		],
 
 		/*proxy: {
             type: 'ajax',
@@ -37,7 +37,7 @@ Ext.define('ABLV.store.Tasks', {
             }
         }*/
 
-		proxy: {
+		/*proxy: {
             type: 'jsonp',
             url : 'http://10.20.30.77:8080/abdemo/index.php/welcome/getFullDemoDataJSONp',
             reader: {
@@ -45,7 +45,7 @@ Ext.define('ABLV.store.Tasks', {
                 callbackKey: 'callback'
 
             }
-        }
+        }*/
 	}
 	
 });

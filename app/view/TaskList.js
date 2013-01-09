@@ -10,7 +10,26 @@ Ext.define('ABLV.view.TaskList', {
 		title: 'Uzdevumu saraksts', 
 		itemId: 'labaislists',
 		grouped: true,
-		itemTpl: '{uzdevumaApraksts}, id: {id}',
+		itemTpl: 
+			[
+			'<div class="task-list-item">',
+            '<span style="background-image: url(http://www.dhl.lv/content/dam/General%20DHL%20pictures/Icons/Small%20teasers_50x50/dhl_open_account_icon_42x40.jpg);"></span>',
+            '{uzdevumaApraksts}, abc {id} ',
+            '</div>'
+            ],
+
+
+/*
+			'<div class="avatar" style="background-image: url(http://www.dhl.lv/content/dam/General%20DHL%20pictures/Icons/Small%20teasers_50x50/dhl_open_account_icon_42x40.jpg)"></div>',
+			'<div class="apraksts"> {uzdevumaApraksts}</div>',
+			'<div class="id"> {id}</div>'*/
+			
+			
+			/*[
+            '<div class="committee">{name}</div>'
+        	]*/
+
+		//<div class="avatar"<tpl if="photo"> style="background-image: url({photo})"</tpl>></div><span class="name">{name}<tpl if="position || affiliation"><br /><span class="tertiary">{position}<tpl if="affiliation">, {affiliation}</tpl></span></tpl></span>',
 		store: 'Tasks',
 		disableSelection: true,
 		refs: {
