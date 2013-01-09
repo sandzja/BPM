@@ -12,10 +12,8 @@ Ext.define('ABLV.view.TaskList', {
 		grouped: true,
 		itemTpl: 
 			[
-			'<div class="task-list-item">',
-            '<span style="background-image: url(http://www.dhl.lv/content/dam/General%20DHL%20pictures/Icons/Small%20teasers_50x50/dhl_open_account_icon_42x40.jpg);"></span>',
-            '{uzdevumaApraksts}, abc {id} ',
-            '</div>'
+			'<div class="task-list-item" style="background-image: url(img/red.jpg); background-size: 21px 20px; background-repeat:no-repeat;"><span style="margin-left:30px;">',
+			'{uzdevumaApraksts}, abc {id}</span></div>'
             ],
 
 
