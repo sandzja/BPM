@@ -205,7 +205,7 @@ Ext.define('ABLV.view.TaskDetails', {
        // record.data.izpildesTermins = Ext.Date.format(date, 'j/d/Y');
         var izpdate = this.down('#izpildesTermins').setValue(Ext.Date.format(date, 'd/m/Y'));
         //console.log(izpdate);
-        record.set("izpildesTermins", Ext.Date.format(date, 'd/m/Y'));
+      //  record.set("izpildesTermins", Ext.Date.format(date, 'd/m/Y'));
 /*
         var todaydate = new Date();
          var changedTodaydate = this.down('#izpildesDatums').setValue(Ext.Date.format(todaydate, 'd/m/Y'));
